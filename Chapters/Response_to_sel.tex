@@ -1,4 +1,4 @@
-\chapter{The Response to Phenotypic Selection}
+fitn\chapter{The Response to Phenotypic Selection}
 \marginnote{See \citet{lewontin1970units}. Note that these
   requirements are not specific to DNA, i.e. the concept of
   evolution by natural selection is substrate independent. }
@@ -67,9 +67,11 @@ an expression for this expectation:
 \begin{center}
 \includegraphics[width=\textwidth]{figures/Response_to_sel/Breeders_eqn.pdf}
 \end{center}
-\caption{A visual representation of the Breeder's equation. Regression of child's phenotype on parental mid-point phenotype ($V_A=V_E=1$). Under truncation selection, only individuals
+\caption{A visual representation of the Breeder's equation. Regression of child's phenotype on parental mid-point phenotype ($V_A=V_E=1$).
+Under truncation selection, only individuals
   with phenotypes $>1$ (red) are bred. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT2.R}}
 \end{marginfigure}
+%JRI: figure is confusing because caption says only individuals past phenotype 1 are bred yet there are phenotypes for the kids of everyone else too (even though they weren't bred)
 
 So to obtain $\mu_{NG}$ we need to compute $\E(X_{mid})$, the expected
 mid-point phenotype of pairs of individuals who survive to
@@ -87,7 +89,9 @@ h^2 (\mu_S - \mu_{BS}) = h^2 S \label{breeders_eqn}
 So our response to selection is proportional to our selection
 differential, and the constant of proportionality is the narrow sense
 heritability. This equation is sometimes termed the Breeder's
-equation. It is a statement that the evolutionary change across
+equation.
+%JRI: maybe cite Lund? not so bad to highlight the contributions of an animal breeder
+It is a statement that the evolutionary change across
 generations ($R$) is proportional to the change caused by directional selection
 within a generation ($S$), and that the strength of this relationship is
 determined by the narrow sense heritability ($h^2$). \\
@@ -98,12 +102,12 @@ determined by the narrow sense heritability ($h^2$). \\
 
 \begin{figure}
 \begin{center}
-\includegraphics[width= 0.6 \textwidth]{Journal_figs/Quant_gen/Galen_flower_herit/Galen_corolla_flare.pdf} 
+\includegraphics[width= 0.6 \textwidth]{Journal_figs/Quant_gen/Galen_flower_herit/Galen_corolla_flare.pdf}
 \end{center}
 \caption{The relationship between maternal and offspring corolla flare (flower
   width) in P. viscosum. From \citeauthor{galen:96}'s data the
   covariance of mother and child is 1.3, while the variance of the
-  mother is 2.8. Data from \citet{galen:96}. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Galen_flower_herit/Gallen_analysis.R}} \label{fig:Galen_corolla}  
+  mother is 2.8. Data from \citet{galen:96}. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Galen_flower_herit/Gallen_analysis.R}} \label{fig:Galen_corolla}
 \end{figure}
 
 \begin{marginfigure}
@@ -118,7 +122,9 @@ Cropped from original.}
 
 \begin{question}
 \citet{galen:96} explored selection on flower shape in
-{\it P. viscosum}.  She found that plants with larger corolla flare
+{\it P. viscosum}. %JRI: just for natural history stuff i think nice to use full genus name first time you present a species.
+%JRI: maybe specify that all plants are hermaophrodite or that V_{mom} = V_{pop} for the trait as that confused at least one person
+She found that plants with larger corolla flare
 had more bumblebee visits, which resulted in higher seed set and a
 $17\%$ increase in corolla flare in the plants contributing to the
 next generation. Based on the data in the caption of Figure \ref{fig:Galen_corolla}
@@ -140,10 +146,10 @@ like this are called `realized heritability'. Estimates of the
 `realized heritability' can readily be produced in artificial selection experiments, see for example Figure \ref{Illinois_LTS_breeders_eq}.
 \begin{question}
   From the experiment shown in Figure \ref{Illinois_LTS_breeders_eq},
-  the mean corn oil content in 1897 was $4.78$, among the $24$ individuals
+  the mean corn oil content in 1897 was $4.78$ and among the $24$ individuals
 chosen to breed to for the next generation the mean was $5.2$. The
-offspring of these individuals in 1888 had a mean kernel oil content of
-$5.1$. What is the narrow sense realized heritability? 
+offspring of these individuals in 1898 had a mean kernel oil content of
+$5.1$. What is the narrow sense realized heritability?
 \end{question}
 
 To understand the genetic basis of the response to selection take a
@@ -160,7 +166,7 @@ for the offspring of the selected parents in the next generation
 (green). \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT3.R}}  \label{Fig:Response_num_alleles}
 \end{figure}
  The individuals who are selected to form our next generation carry
- more alleles that increase the phenotype, in the current range of
+ more alleles that increase the phenotype in the current range of
  environments currently experienced by the population. The average
  individual before selection carried 100 of these `up' alleles, the average
  individual surviving selection 108 `up' alleles. As individuals
@@ -196,7 +202,7 @@ If our selection pressure is sustained over many generations, we can
 use our breeder's equation to predict the response. If we are willing
 to assume that our heritability does not change and we maintain a constant selection
 gradient, then after $n$ generations our phenotype mean will have
-shifted 
+shifted
 \begin{equation}
 n h^2 S
 \end{equation}
@@ -256,13 +262,13 @@ selection within a generation. State your assumptions.\\
 \end{question}
 
 
-In wild populations, selection pressures are likely rarely sustained 
+In wild populations, selection pressures are likely rarely sustained
 for large numbers of generations. For example, the Grants' have
 measured phenotypic selection in Darwin's Finches over multiple
 decades on the island of Daphne Major. They have seen that
 selection pressures in the Medium ground-finch ({\it Geospiza fortis})
 have reversed a number of times over the years (Figure
-\ref{fig:Darwins_Finches_unpred}). 
+\ref{fig:Darwins_Finches_unpred}).
 
 \begin{figure}
 \begin{center}
@@ -273,7 +279,7 @@ have reversed a number of times over the years (Figure
   are shown as horizontal bars. {\bf Bottom)} Standardized
   selection differentials on body size. The statistical significant of
   the selection differentials is shown, black points are $p<0.001$ and grey $p<0.05$.
-  Data from \citet{grant2002unpredictable} \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.R}} \label{fig:Darwins_Finches_unpred}  
+  Data from \citet{grant2002unpredictable} \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.R}} \label{fig:Darwins_Finches_unpred}
 \end{figure}
 
 \begin{marginfigure}
@@ -283,7 +289,7 @@ have reversed a number of times over the years (Figure
 \caption{Medium ground-finch ({\it Geospiza fortis}). \BHLNC{The zoology of
   the voyage of H.M.S. Beagle. Birds Part 3. (1841) Gould G. Edited by
   Darwin, C. Illustration by Elizabeth Gould.}{https://www.flickr.com/photos/biodivlibrary/8429528265/in/album-72157632647903291/}{Natural History Museum Library, London
-}} \label{fig:Geospiza_fortis}  
+}} \label{fig:Geospiza_fortis}
 \end{marginfigure}
 %% Gingrich style data https://datadryad.org/resource/doi:10.5061/dryad.1tn7123?show=full
 %% https://datadryad.org/resource/doi:10.5061/dryad.7d580
@@ -318,7 +324,7 @@ do survive to reproduce is
 where the denominator is a normalization constant which ensures that
 our phenotypic distribution integrates to one. The denominator also
 has the interpretation of being the mean fitness of the population,
-which we'll call $\wbar$, i.e.  
+which we'll call $\wbar$, i.e.
 \begin{equation}
 \wbar =  \int_{-\infty}^{\infty} p(x) w(x) dx. \label{eqn:pheno_mean_fitness}
 \end{equation}
@@ -332,7 +338,7 @@ reproduce as
     \includegraphics[width= \textwidth]{illustration_images/Quant_gen/red_deer/Red_deer.png}
 \end{center}
 \caption{Red deer ({\it Cervus elaphus}). \BHLCC{British
-    mammals. Thorburn, A. (1920)}{https://www.flickr.com/photos/biodivlibrary/21269550204}{Field Museum of Natural History Library}{2.0}} \label{fig:red_deer}  
+    mammals. Thorburn, A. (1920)}{https://www.flickr.com/photos/biodivlibrary/21269550204}{Field Museum of Natural History Library}{2.0}} \label{fig:red_deer}
 \end{marginfigure}
 
 If we mean center the distribution of phenotypes in our population, i.e. set the phenotype before
@@ -353,25 +359,25 @@ $w(X)$
   w(X) \right) -\E(X)\E(w(X)) =Cov \left(X, \nicefrac{w(X)}{\wbar} \right) \label{S_covar}
 \end{equation}
   Thus our change in mean phenotype is directly a measure of the
-  covariance of our phenotype and our fitness. 
+  covariance of our phenotype and our fitness.
   Rewriting our breeder's
 equation using this observation we see
 \begin{equation}
-R = \frac{V_A}{V}  Cov \left(X, \nicefrac{w(X)}{\wbar} \right)  
+R = \frac{V_A}{V}  Cov \left(X, \nicefrac{w(X)}{\wbar} \right)
 \end{equation}
 
 we see that the response to selection is due to the fact that our
 fitness (viability) of our organisms/parents covaries with our phenotype, and
-that our child's phenotype is correlated with our parent's phenotype. 
+that our child's phenotype is correlated with our parent's phenotype.
 
 
 \paragraph{Fitness Gradients and linear regressions}
 
 To understand this in more detail let imagine that we calculate the
-linear regression of an individual $i$'s mean-centered phenotype ($X_i$) on fitness ($W_i$), i.e. 
+linear regression of an individual $i$'s mean-centered phenotype ($X_i$) on fitness ($W_i$), i.e.
 \begin{equation}
 W_i \sim \beta X_i + \wbar \label{fitness_regression}
-\end{equation}  
+\end{equation}
 The best fitting slope of this regression ($\beta$), lets call it the
 `fitness gradient', is given by
 \begin{equation}
@@ -384,7 +390,7 @@ The best fitting slope of this regression ($\beta$), lets call it the
 \caption{Lifetime reproductive success (LRS) of male Red Deer as a
   function of their antler mass. Data from \citet{kruuk2002antler},
   see the paper for discussion of the complexities of equating this
-  selection gradient with the evolutionary response. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.R}. } \label{fig:red_deer_fitness_grad}  
+  selection gradient with the evolutionary response. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.R}. } \label{fig:red_deer_fitness_grad}
 \end{marginfigure}
 
   i.e. the fitness gradient is the covariance of phenotype-fitness
@@ -392,12 +398,12 @@ The best fitting slope of this regression ($\beta$), lets call it the
 \begin{equation}
 R= V_A \beta \label{eqn:R_beta}
 \end{equation}
-i.e. we'll see a directional response to selection if there is a linear relationship of phenotype on fitness, and if there is additive genetic variance for the phenotype. As one example of a fitness gradient, in Figure \ref{fig:red_deer_fitness_grad}  the lifetime reproductive success (LRS) of male Red Deer is plotted against the weight of their antlers. The red line gives the linear regression of fitness (LRS) on antler mass and the slope of this line is the fitness gradient ($\beta$). 
+i.e. we'll see a directional response to selection if there is a linear relationship of phenotype on fitness, and if there is additive genetic variance for the phenotype. As one example of a fitness gradient, in Figure \ref{fig:red_deer_fitness_grad}  the lifetime reproductive success (LRS) of male Red Deer is plotted against the weight of their antlers. The red line gives the linear regression of fitness (LRS) on antler mass and the slope of this line is the fitness gradient ($\beta$).
 
 \graham{add pic of relationship between slope and S?}
 
-\paragraph{Fisher's fundamental theorem of natural selection} 
-Finally how does the mean fitness of our population evolve? 
+\paragraph{Fisher's fundamental theorem of natural selection}
+Finally how does the mean fitness of our population evolve?
 If we choose relative fitness to be our phenotype
   ($X=\nicefrac{w(X)}{\wbar}$), then the response in fitness is
 \begin{align}
@@ -414,7 +420,7 @@ to its genetic variance in fitness at that time.'' -\citet{fisher1930} (pg 37)
 Fisher called this `the fundamental theorem of natural
 selection'. Our proof here is just a sketch, and more formal
 approaches are needed to show it in generality. There has been much nashing of teeth over exactly how broadly this result holds, and exactly what
-Fisher meant \citep[see ][ for a recent overview]{ewens2010gene}. 
+Fisher meant \citep[see ][ for a recent overview]{ewens2010gene}.
 % Ruth shaw FFTNS https://www.biorxiv.org/content/biorxiv/early/2019/04/07/601682.full.pdf
 % https://commons.wikimedia.org/wiki/File:A_guide_to_the_wild_flowers_(Plate_CXXV)_BHL23798491.jpg
 
@@ -433,7 +439,7 @@ our population toward local fitness optima. The coloured bar shows the
 derivative (slope) of the mean fitness with respect to mean
 phenotype (eqn. \eqref{eqn:pheno_fitness_landscape}). Red values are positive slopes corresponding to the population evolving
 towards the right of the page, blue is a negative slope with the
-population moving to the left. } \label{fig:fitness_landscape_1D}  
+population moving to the left. } \label{fig:fitness_landscape_1D}
 \end{figure*}
 
 One common metaphor when we talk about evolution is that of a population exploring an adaptive landscape with natural selection pushing a population
@@ -449,7 +455,7 @@ selection ($R$) could be written in terms of the gradient (derivative) of the
 mean fitness ($\wbar$) of the population\sidenote[][3cm]{
   This follows from the fact that we can then move the
   derivative inside the integral of $\wbar$, eqn \eqref{eqn:pheno_mean_fitness}, %$\nicefrac{\partial \log\wbar}{\partial \bar{x}} = \nicefrac{1}{\wbar} \nicefrac{\partial\wbar}{\partial \bar{x}}$.
-to write the new term in eqn \eqref{eqn:pheno_fitness_landscape} as 
+to write the new term in eqn \eqref{eqn:pheno_fitness_landscape} as
   \begin{align}
 \frac{1}{\wbar}  \frac{\partial \wbar}{\partial \bar{x}} &=
                                                                    \frac{1}{\wbar}
@@ -463,16 +469,16 @@ which is $\beta$, so that eqns \eqref{eqn:R_beta} and
 to hold, in the first line we assume that $w(x)$ is not a function
 of $\bar{x}$, while the middle line is true when $p(x)$ is the normal distribution.
 }
-as a function of the mean phenotype:  
+as a function of the mean phenotype:
 \begin{equation}
-  R = \frac{V_A}{\wbar} \frac{\partial \wbar}{\partial \bar{x}}  \label{eqn:pheno_fitness_landscape}  %V_A 
+  R = \frac{V_A}{\wbar} \frac{\partial \wbar}{\partial \bar{x}}  \label{eqn:pheno_fitness_landscape}  %V_A
  % \frac{\partial \log \left(\wbar \right)}{\partial \bar{z}}
 \end{equation}
 
 What does this mean? Well $\nicefrac{V_A}{\wbar}$ is always positive,
 so the direction our population responds to selection is
 predicted by the sign of the derivative. If increasing the mean
-phenotype of the population slightly would 
+phenotype of the population slightly would
 increase mean fitness ($ \nicefrac{\partial \wbar}{\partial \bar{x}}
 >0$) our population will respond that generation by evolving toward
 higher values of the trait ($R>0$), left panel of Figure \ref{fig:fitness_landscape_1D_w_wbar}. Conversely if decreasing the
@@ -495,9 +501,9 @@ discuss the caveats of this interpretation below).
    fitting linear approximation to the relationship between phenotype
    and fitness, eqn \eqref{fitness_regression}, whose slope is
    $\beta$. The top panel shows the distribution of the phenotype
-   before and after selection. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/fitness_landscape_1D_animated.R}.} \label{fig:fitness_landscape_1D_w_wbar}  
+   before and after selection. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/fitness_landscape_1D_animated.R}.} \label{fig:fitness_landscape_1D_w_wbar}
  \end{figure*}
- 
+
 
 What happens when it
 reaches the top? Well at the top of a peak $ \nicefrac{\partial
@@ -526,7 +532,7 @@ on a local, but not global peak of fitness (see, for example Figure \ref{fig:fit
   calculated in 250 year bins. {\bf Bottom)} How our population moves
   on the Inferred fitness landscape. The arrows show each move made by
   the population in the 250 intervals. Data from
-  \citet{bell2006inferring} and \citet{hunt2008evolution}  \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Stickleback_fossil_traj/Stickleback_traj.R} } \label{fig:Stickleback_fossil_traj}  
+  \citet{bell2006inferring} and \citet{hunt2008evolution}  \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Stickleback_fossil_traj/Stickleback_traj.R} } \label{fig:Stickleback_fossil_traj}
 \end{marginfigure}
 
 One dramatical example documenting adaptive evolution to a new
@@ -556,7 +562,7 @@ the population towards this local optimum. \begin{marginfigure}
  \begin{center}
  \includegraphics[width= \textwidth]{illustration_images/Quant_gen/Fossil_stickleback/journal.pbio.1001466.g003.eps}
  \end{center}
- \caption{Fossil stickleback. Photo by Peter J. Park from \citet{losos2013evolutionary}, \PLOSccBY.} \label{fig:Stickleback_fossil}  
+ \caption{Fossil stickleback. Photo by Peter J. Park from \citet{losos2013evolutionary}, \PLOSccBY.} \label{fig:Stickleback_fossil}
 \end{marginfigure}
 
 \paragraph{Issues with the Interpretation of Fitness Landscapes.}
@@ -582,7 +588,7 @@ mates, as then the fitness of an individual depends on the strategies pursued
 by other individuals in the populations. A classic example of this is
 the fact that sexual selection may drive our
 population towards pursing mate choice strategies that actively lower
-the mean fitness of the population. 
+the mean fitness of the population.
 % \graham{Thinking of a marble
 % rolling around in the bottom of a bowl
 % You could think about the
@@ -603,7 +609,7 @@ individuals in the tails of the distribution, with those closer
 to the mean phenotype having higher fitness, which lowers the
 variance. Selection could also disfavour individuals close to the
 population mean, with individuals with extreme phenotypes having
-higher fitness, which acts to increase the fitness. 
+higher fitness, which acts to increase the fitness.
 
 Directional selection occurs because of the covariance
 between our phenotype and fitness, eqn \eqref{S_covar}. Just as we expressing directional selection as a covariance allowed us to
@@ -635,7 +641,7 @@ Values of $\gamma<0$  are consistent with stabilizing selection,
 reducing the variance. While values of $\gamma>0$ are consistent with disruptive
 selection, increasing the variance. \graham{add refs about this not being sufficient}
 
-%To do this we can think about how selection acts 
+%To do this we can think about how selection acts
 
 % https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1469-1809.1951.tb02469.x
 
@@ -647,7 +653,7 @@ selection, increasing the variance. \graham{add refs about this not being suffic
   weights (left axis)  Dots show the mortality probability for different
   birth-weight bins (right axis), the red line shows a fitted
   quadratic model to mortality. Data from \citet{karn1951birth}
-  Table 2, collapsing male and female births, \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/birth_weight/birth_weight_selection.R} } \label{fig:Birth_weight}  
+  Table 2, collapsing male and female births, \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/birth_weight/birth_weight_selection.R} } \label{fig:Birth_weight}
 \end{figure}
 
 Under stabilizing selection the individuals with extreme phenotypes in
@@ -672,7 +678,7 @@ access to good prenatal care \citep{ulizzi1992natural}.  %, a large effect of wh
 \caption{Lesser seedcracker {\it Pyrenestes minor} a close relative of
   the Black-bellied seedcracker, whose beak is about the same size as
   the smallest Black-bellied individuals. \BHLNC{The birds of Africa, comprising all the species
-    which occur in the Ethiopian region. (1986) Sclater, W. L Plate by  H. Gr{\"o}nvold}{https://archive.org/stream/birdsofafricacom41shel/birdsofafricacom41shel\#page/n306/mode/1up}{Smithsonian Libraries} }  
+    which occur in the Ethiopian region. (1986) Sclater, W. L Plate by  H. Gr{\"o}nvold}{https://archive.org/stream/birdsofafricacom41shel/birdsofafricacom41shel\#page/n306/mode/1up}{Smithsonian Libraries} }
 \end{marginfigure}
 In Central Africa, Black-bellied seedcrackers ({\it
   P. ostrinus}) show disruptive selection on a remarkable beak-size polymorphism (Figure \ref{Black_bellied_seedcrackers_beaks}).  The small-beaked individuals feed on
@@ -686,7 +692,7 @@ well adapted to either seed resource.  Break length is subject to
 disruptive selection, as can also be seen by the significant negative quadratic
 term in the regression of survival probability on break length. The variance of mandible in the total sample of individuals was
 $0.5$mm$^2$ in the survivors this variance increased by a factor of
-almost $\times 2.5$ to $1.3$mm$^2$.  
+almost $\times 2.5$ to $1.3$mm$^2$.
 
 \begin{figure}
 \begin{center}
@@ -698,7 +704,7 @@ almost $\times 2.5$ to $1.3$mm$^2$.
   Black-bellied seedcrackers, all juveniles are shown in white, while the
   black bars show the survivors. The red curve shows the best fitting
   linear and quadratic model to the probability of survival, fitted
-  using a binomial generalized linear models with a logit link function.  
+  using a binomial generalized linear models with a logit link function.
   \BHLNC{Left illustration from: Size variation in {\it Pyrenestes} by
     Chapin J.P. in the Bulletin of the
     American Museum of Natural History (Vol. XLIX
@@ -719,7 +725,7 @@ deal for the larvae, it is not without its perils. \begin{marginfigure}[2cm]
 \end{center}
 \caption{The gall formed by the goldenrod
 ball gallmaker ({\it Eurosta solidaginis}) in a goldenrod plant. The
-one on the right is cut to show a partial cross-section. \BHLNC{Annual report of the New York State Museum (1917)}{https://archive.org/stream/annualreport71newy/\#page/196/mode/1upp}{The LuEsther T Mertz Library, the New York Botanical Garden} }  
+one on the right is cut to show a partial cross-section. \BHLNC{Annual report of the New York State Museum (1917)}{https://archive.org/stream/annualreport71newy/\#page/196/mode/1upp}{The LuEsther T Mertz Library, the New York Botanical Garden} }
 \end{marginfigure}
 When the small, ball galls fall risk of parasitism from parasitoid
 wasps. This selection drives strong positive directional selection on
@@ -730,7 +736,7 @@ woodpeckers and black-capped chickadees, who seek out the tasty
 larvae. Thus intermediate size galls are favoured, a fitness peak that
 the population quickly reaches this fitness peak. Once on this peak,
 there is no directional selection, i.e. no linear slope, but there
-is strong stabilizing selection, i.e. a quadratic term. 
+is strong stabilizing selection, i.e. a quadratic term.
 
 \begin{figure}
 \begin{center}
@@ -754,14 +760,14 @@ bins of different sized galls.The solid line is a fitted individual fitness
 %https://sci-hub.tw/https://www.nature.com/articles/363618a0
 %https://www.flickr.com/photos/internetarchivebookimages/20416920856/in/photolist-otagrj-xVVxst-wRSxF1-x7b4fQ-x9uxzB
 %https://www.flickr.com/photos/internetarchivebookimages/14755609045/
- 
+
 % Cross bill https://www.google.com/search?q=loxia+curvirostra+biodiversity+heritage+library&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjItfbRm87iAhUyMn0KHZDNDlIQ_AUIECgB&biw=1440&bih=726#imgrc=cfi-GvhZRX1zxM:
 % https://sci-hub.tw/https://www.jstor.org/stable/2937103?seq=1#metadata_info_tab_contents
 
 
 %file:///Users/gcoop/Downloads/calsbeek2008.pdf  disruptive selection
 %on leg length in anoles
- 
+
 
 \section{The response of multiple traits to selection.}
 We can generalize these results for multiple traits, to ask how selection on
@@ -774,17 +780,17 @@ where the $1$ and $2$ index our two different traits. Here $V_{A,1,2}$ is our ad
 
 We can also write this in matrix form. We can write
 our change in the mean of our multiple phenotypes within a generation as the vector $\bf{S}$ and our response across multiple generations as
-the vector $\bf{R}$. These two quantities are related by 
+the vector $\bf{R}$. These two quantities are related by
 \begin{equation}
 \bf{R} = \bf{G} \bf{V}^{-1} \bf{S} = \bf{G} \boldsymbol{ \beta}
 \end{equation}
  where $\bf{V}$ and $\bf{G}$ are our matrices of the
  variance-covariance of phenotypes and additive genetic values
  (eqn. \eqref{G_matrix} \eqref{P_matrix}) and
- $\boldsymbol{\beta}$ is a vector of selection gradients (i.e. the change within a generation as a fraction of the total phenotypic variance). 
+ $\boldsymbol{\beta}$ is a vector of selection gradients (i.e. the change within a generation as a fraction of the total phenotypic variance).
 
 \gc{Need to add example of using this.}
- 
+
 \begin{question}
 You collect observations of red deer within a generation, recording an
 individual's number of offspring and phenotypes for a number of traits which are known to
@@ -821,7 +827,7 @@ As an example of correlated responses to selection, consider the  \citet{wilkins
  \ref{fig:Stalk_eyed_response}). Despite the fact that he did not
  select on females, he saw a correlated response in the females from
  each of the lines (right plot), because of the genetic correlation
- between male and female body proportions. 
+ between male and female body proportions.
 
 \begin{figure}
 \begin{center}
@@ -833,14 +839,14 @@ As an example of correlated responses to selection, consider the  \citet{wilkins
  decreased ratio (down triangles), by taking the top 10 males with the highest (lowest)
  ratio out of 50 measures. He also established two control populations
  (circles). He constructed each generation of females by sampling 10
- at random from each population.  Data from \citet{wilkinson:93}. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/stalk_eyed_flies/Wilkinson_93_response_to_sel.R} } \label{fig:Stalk_eyed_response}   %\cite{potti:11} 
+ at random from each population.  Data from \citet{wilkinson:93}. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/stalk_eyed_flies/Wilkinson_93_response_to_sel.R} } \label{fig:Stalk_eyed_response}   %\cite{potti:11}
 \end{figure}
 
 \begin{marginfigure}[1cm]
 \begin{center}
 \includegraphics[width=0.9 \textwidth]{illustration_images/Quant_gen/Stalk_eyed_flies/WulpPlateVIIIjpg.jpg}
 \end{center}
-\caption{Stalk-eyed Flies ({\it Diopsidae}).  \BHLNC{Diptera. van der Wulp. 1898.}{https://www.biodiversitylibrary.org/item/39414\#page/631/mode/1up}{Smithsonian Libraries}} \label{fig:Stalk_eyed_flies}  
+\caption{Stalk-eyed Flies ({\it Diopsidae}).  \BHLNC{Diptera. van der Wulp. 1898.}{https://www.biodiversitylibrary.org/item/39414\#page/631/mode/1up}{Smithsonian Libraries}} \label{fig:Stalk_eyed_flies}
 \end{marginfigure}
 \begin{question}
 
@@ -856,11 +862,11 @@ each generation. What is the male heritability of eye-stalk to body-length ratio
 equal and that there is no direct
 selection on female body-proportion in this experiment, i.e. that all of
 the response in females is due to correlated selection. Can you
-estimate the male-female genetic correlation of the eye-stalk ratio? 
+estimate the male-female genetic correlation of the eye-stalk ratio?
 \end{question}
 
 \begin{figure*}
-\begin{center} 
+\begin{center}
 \includegraphics[width= \textwidth]{Journal_figs/Quant_gen/Garter_snakes_Brodie/Garter_snakes_Brodie.pdf}
 \end{center}
 \caption{ {\bf Left)} The garter snake fitness surface estimated by \citet{brodie1992correlational}
@@ -870,9 +876,9 @@ estimate the male-female genetic correlation of the eye-stalk ratio?
    of surviving snakes. Note how snakes in the top left and bottom
    right corner are over represented in the survivors. Data from  \citet{brodie1992correlational}
   \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Garter_snakes_Brodie/Garter_snakes_Brodie.R}. } \label{fig:Garter_snakes_Brodie}
-\end{figure*} 
+\end{figure*}
 
-%s, where the snakes with thehighest probability of survival perform uninterrupted flight if striped but flee evasivelyif spotted or unstriped.  
+%s, where the snakes with thehighest probability of survival perform uninterrupted flight if striped but flee evasivelyif spotted or unstriped.
 
 % Eutaenia ordinoides
 % northwestern garter snake (Thamnophis ordinoides)
@@ -883,7 +889,7 @@ We can estimate multivariate directional ($\beta$) and quadratic selection
 gradients ($\gamma$) just as we did for a single traits ($x_1$ and $x_2$), using linear
 and quadratic models (in eqn \eqref{fitness_regression} and \eqref{fitness_regression_stab}). For example, for two traits we can write
 \begin{equation}
-w_i \sim \beta_1 x_{1,i} + \nicefrac{1}{2} \gamma_1 x_{1,i}^2 + \beta_2 x_{2,i} + \nicefrac{1}{2} 
+w_i \sim \beta_1 x_{1,i} + \nicefrac{1}{2} \gamma_1 x_{1,i}^2 + \beta_2 x_{2,i} + \nicefrac{1}{2}
 \gamma_2 x_{2,i}^2  + \gamma_{1,2} x_{1,i} x_{2,i}  + \wbar \label{fitness_regression_MV}
  \end{equation}
 where $\beta_1$ and $\gamma_1$ are the directional and quadratic
@@ -898,7 +904,7 @@ selection on multiple predation-avoidance traits in northwestern garter snakes
 the lab into the wild, and then performed mark-recapture observations
 to monitor their fate.
 \begin{marginfigure}
-\begin{center} 
+\begin{center}
 \includegraphics[width= 0.75\textwidth]{illustration_images/Quant_gen/Garter_snake/Eutaenia_cooperi.jpg}
 \end{center}
 \caption{Northwestern garter snake ({\it Eutaenia cooperi}, now {\it
@@ -915,12 +921,12 @@ during simulated flight from a predator. His quadratic fitness surface is shown 
 \ref{fig:Garter_snakes_Brodie}, based on fitting the
 regression given by eqn \eqref{fitness_regression_MV} to juvenile
 survival. He found that neither single trait directional of quadratic
-gradients were significant, ie there was no apparent selection on one 
+gradients were significant, ie there was no apparent selection on one
 trait ignoring the other. However, there was a significant, negative
 covariance ($\gamma_{1,2}<0$). The individuals with the highest chance of survival are
 {\it either} highly striped and perform few reversals (top left
 corner), {\it or} have little striping but reverse course frequently
-(bottom right corner). 
+(bottom right corner).
 
 \gc{Add section of multivariate fitness landscapes}
 
@@ -933,10 +939,10 @@ offers strong insights into the mechanistic underpinnings of kin selection and s
 \subsection{Hamiliton's Rule and the evolution of altruistic and selfish behaviours}
 \marginnote{\citet{smith1964kin} coined the name kin selection to describe Hamilton's approach to this problem. It's also sometimes called the inclusive fitness approach, as we need to include not just one individual's fitness but the weighted sum of all the fitness of all their relatives. }
 Individuals frequently behave in ways that sacrifice their own fitness for the
-benefit of others. That selection favours such apparent acts of altruism is puzzling at first sight. \citet{hamilton1964genetical,hamilton1964genetical2} supplied the first general evolutionary explanation of such altruism. 
-His intuition was that while an individual is losing out of some reproductive output, the alleles underlying an altruistic behaviour can still spread in the population if this cost is outweighed by benefits gained 
+benefit of others. That selection favours such apparent acts of altruism is puzzling at first sight. \citet{hamilton1964genetical,hamilton1964genetical2} supplied the first general evolutionary explanation of such altruism.
+His intuition was that while an individual is losing out of some reproductive output, the alleles underlying an altruistic behaviour can still spread in the population if this cost is outweighed by benefits gained
 through the transmission of these alleles through a related individual. Note that this means that the
-allele is not acting in an self-sacrificing manner, even though individuals may as a result. 
+allele is not acting in an self-sacrificing manner, even though individuals may as a result.
  \begin{marginfigure}
 \begin{center}
 \includegraphics[width= 0.7 \textwidth]{illustration_images/Quant_gen/honey_ant/honey_ant.png}
@@ -947,29 +953,29 @@ allele is not acting in an self-sacrificing manner, even though individuals may 
   device.  \BHLNC{Ants,
   bees, and wasps; a record of observations on the habits of the
   social Hymenoptera (1897) Lubbock, J.}{https://www.biodiversitylibrary.org/page/9657360\#page/485/mode/1up}{Smithsonian Libraries}  } \label{fig:honey_ant}
-\end{marginfigure} 
+\end{marginfigure}
 
 Altruism reflects social interactions. So as a simple model let's imagine that individuals interact in pairs, with our focal
-individual $i$ being paired with an individual $j$. This could be pairs of siblings interacting.   
+individual $i$ being paired with an individual $j$. This could be pairs of siblings interacting.
 Imagine that individuals have two possible phenotypes $X=1$ or $0$,
 corresponding to providing or withholding some small act of `altruism'
 (we could just as easily flip these labels and call them an unselfish
-act and a selfish act respectively). 
+act and a selfish act respectively).
 Our pairs of individuals interacting could, for example, be siblings sharing a
 nest. The altruistic trait could be as simple as growing at a slightly slower rate so as to reducing sibling-competition for food from
 parents, or more complicated acts of altruism such as children foregoing their own reproduction so as to help their parents raise their siblings.
 
-Providing the altruistic act has a cost $C$ to the fitness of our individual and failing to provide this act has no cost. Receiving this altruistic act confers a fitness benefit $B$ over individuals who did not receive this act. \citeauthor{hamilton1964genetical}'s rule states that such a trait will spread through the population if 
+Providing the altruistic act has a cost $C$ to the fitness of our individual and failing to provide this act has no cost. Receiving this altruistic act confers a fitness benefit $B$ over individuals who did not receive this act. \citeauthor{hamilton1964genetical}'s rule states that such a trait will spread through the population if
 \begin{equation}
- 2F B > C 
+ 2F B > C
 \end{equation}
 where $F$ is the average kinship coefficient between the interacting
 individuals ($i$ and $j$). In the usual formulation of Hamilton's Rule our $2F$ is replaced by the `Coefficient of relationship', which is the
   proportion of alleles shared between the individuals. Here we use
-  two times the kinship coefficient to keep things inline with our 
+  two times the kinship coefficient to keep things inline with our
   notation for these chapters. Note that if our individuals are themselves inbred we need
 to do a little more careful to reconcile these two measures.
-So the altruistic behaviour will spread even if it is costly to the individual if its cost is paid off by the benefit to sufficiently related individuals. 
+So the altruistic behaviour will spread even if it is costly to the individual if its cost is paid off by the benefit to sufficiently related individuals.
 
 As one example of kin-selection consider \citet{krakauer2005kin}'s work on
 co-operative courtship in wild turkeys ({\it Meleagris
@@ -985,7 +991,7 @@ Naturgeschichte der Vögel in ihren sämmtlichen Hauptformen (1864). Wien,K.K. H
 \end{marginfigure}  These pairs are often full brothers ($F=0.25$),
 with the subordinate male often being the younger of the two. The
 subordinate male often loses out on mating opportunities over their
-entire lifetime by acting as a wingman to their older 
+entire lifetime by acting as a wingman to their older
 brothers. \citet{krakauer2005kin} estimated that dominant males gained
 an extra $6.1$ offspring when they display with a partner than males
 who display alone. While the subordinate males lose out on fathering $0.9$
@@ -1014,23 +1020,23 @@ $\nicefrac{1}{2}$ sibs, or first cousins?
 \end{marginfigure}
 
 
-Where does this result come from? Well, we can use our quantitative genetics framework to gain some 
+Where does this result come from? Well, we can use our quantitative genetics framework to gain some
 intuition by deriving a simple version of Hamilton's Rule by thinking
 about the phenotypes of an individual's kin as genetically correlated
-phenotypes. To sketch a proof of this result, let's assume that our focal $i$ individual's fitness can be written as 
+phenotypes. To sketch a proof of this result, let's assume that our focal $i$ individual's fitness can be written as
 \begin{equation}
 W(i,j)= W_0 + W_i +W_j
 \end{equation}
 where $W_i$ is the contribution of the fitness of the individual $i$ due
 to their own phenotype, and $W_j$ is the contribution to our
 individual $i$'s fitness due to the interacting individual $j$'s behaviour (i.e. $j$'s phenotype).
-With the benefit $B$ and cost $C$, our $W(i,j)$ are depicted in Figure \ref{fig:Hamilton_B_C}. 
+With the benefit $B$ and cost $C$, our $W(i,j)$ are depicted in Figure \ref{fig:Hamilton_B_C}.
 
-Following our multivariate breeder's equation, we can write the expected change of our behavioural phenotype as 
+Following our multivariate breeder's equation, we can write the expected change of our behavioural phenotype as
 \begin{equation}
 R = \beta_i V_A + \beta_j V_{A,i,j},
 \end{equation}
-Our altruistic phenotype is increasing in the population if $R>0$, i.e. if 
+Our altruistic phenotype is increasing in the population if $R>0$, i.e. if
 \begin{equation}
   \beta_i V_A + \beta_j V_{A,i,j}  > 0 \end{equation}
 \marginnote{ Here we've following a simplified version of
@@ -1044,10 +1050,10 @@ constant of proportionality). Therefore, our altruistic phenotype is increasing 
  B \frac{V_{A,i,j}}{V_A} & >  C
 \end{eqnarray}
 So what's the average genetic covariance between
-individual $i$ and $j$'s altruistic phenotype? Well it's the same behavioural phenotype in both individuals, so the phenotypes are genetically correlated if our individuals are related to each other. The covariance of the same phenotype between two individuals is just $2 F_{i,j} V_A$ (see \eqref{additive_covar_general_rellys}). So our altruistic phenotype is increasing in the population if 
+individual $i$ and $j$'s altruistic phenotype? Well it's the same behavioural phenotype in both individuals, so the phenotypes are genetically correlated if our individuals are related to each other. The covariance of the same phenotype between two individuals is just $2 F_{i,j} V_A$ (see \eqref{additive_covar_general_rellys}). So our altruistic phenotype is increasing in the population if
 \begin{eqnarray}
    & B\frac{2 F_{i,j} V_A}{V_A} &> C \nonumber  \\
-  2 F_{i,j} B & > C 
+  2 F_{i,j} B & > C
 \end{eqnarray}
 
 Seen from this perspective, \citeauthor{hamilton1964genetical}'s rule
@@ -1066,7 +1072,7 @@ altruistic phenotype, i.e. carrying altruistic alleles, is paid back through the
 
 Organisms often put an enormous effort into finding and attracting mates, sometimes at
 a considerable cost to their chances of survival. Why are individuals so choosy about who they mate with, particularly when their choice seems to be based on elaborate characters and arbitrary displays
-that surely lower the viability of their mates?  
+that surely lower the viability of their mates?
 
 % Slug mating https://commons.wikimedia.org/wiki/File:Limax_maximus_mating.jpg
 % https://www.flickr.com/photos/internetarchivebookimages/20406571412/
@@ -1096,7 +1102,7 @@ One major reason why individuals evolve to be choosy about who they mate with is
 particular characteristics, individuals can gain more parental care for
 their offspring, avoid parasites, or be choosing a mate with higher fertility. For example,  female glow-worms flash at night to attract males flying by. Females with larger, brighter lanterns have higher fecundity, so
 males with a preference for brighter flashes will gain a direct benefit to their own fitness. (Note that males will benefit even if these differences in female fecundity are entirely driven by differences in environment, and so non-heritable.) Indeed male glow worms have evolved to be attracted to brighter
-flashing lures.  
+flashing lures.
 
 However, even in the absence of direct benefits of choice, selection can still indirectly favour the evolution of choosiness. These
 indirect benefits occur because individuals can have higher fitness
@@ -1145,7 +1151,7 @@ tail-length preference, the ones with a preference for longer
 tails will mate with long-tailed males and the opposite for females
 with a preference for shorter-tails. Therefore, a
 genetic correlation between mates display and preference traits will
-become established (see Figure \ref{fig:assort_mating_2_trait}). 
+become established (see Figure \ref{fig:assort_mating_2_trait}).
 
 The males with the longer tails will also carry the alleles
 associated with the preference for longer tails, as their long-tailed
@@ -1153,7 +1159,7 @@ dads tended to mate with females with a genetic preference for long
 tails. Similarly, the males with shorter tails will carry alleles associated with the preference for
 shorter tails. Thus if there is direct selection for males with longer tails, then
 the female preference for longer tails will increase too, as it is
-genetically correlated via assortative mating. 
+genetically correlated via assortative mating.
 
 \begin{figure}
 \begin{center}
@@ -1176,11 +1182,11 @@ guppies, females show a preference for males with more orange colouration.\begin
 \end{center} \label{fig:assort_mating_guppies}
 \caption{Guppy ({\it Poecilia reticulata}). \newline \noindent \tiny{From a set of 1962 stamps
   of Hungary. Contributed to \href{https://commons.wikimedia.org/wiki/File:1439_fish_40.png}{wikimedia} by Darjac, not covered by copyright}}
-\end{marginfigure} 
+\end{marginfigure}
  \citeauthor{houde:94} established four replicate
 population pairs of guppies and selected one of each pair for an increased or decreased orange coloration in males, selecting the top/bottom $20$ out of $50$
 males. She randomly chose females from each population to form the next generation, and so did not
-exert direct selection on females. She measured the response to 
+exert direct selection on females. She measured the response to
 selection on male colouration and on female preference for orange (left
 and right panels of Figure \ref{fig:assort_mating_guppies}
 respectively). In the lines that were selected for more orange males
@@ -1191,7 +1197,7 @@ selection on male colouration, due to a genetic correlation between
 female preference and male trait. It is {\it a priori} unlikely
 that pleiotropy is the source of the genetic correlation between these
 traits, rather it is likely caused by females assortative mating with
-males that match their colour preference. 
+males that match their colour preference.
 
 
 
@@ -1202,7 +1208,7 @@ longer tails are genetic correlated with higher male viability, for
 example perhaps only males who gather an excess of food have the
 resources to invest in growing long tail, i.e. a long tail is an
 honest signal. This would be a good genes explanation of female mate
-choice evolution.  
+choice evolution.
 
 \begin{marginfigure}
 \begin{center}
@@ -1232,7 +1238,7 @@ the Fisherian runaway model \citep{fisher1915evolution}, as female
 preference and male trait can coevolve in an escalating fashion
 driving more and more extreme preferences for arbitrary traits. Thus
 many extravagant display traits in males and females may exist purely
-because individuals find them beautiful and are attracted to them. 
+because individuals find them beautiful and are attracted to them.
 
 
 
