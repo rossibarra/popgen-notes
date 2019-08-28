@@ -160,7 +160,7 @@ simulation figures.
 \includegraphics[width=\textwidth]{figures/QT3_w_genosums.pdf}
 \end{center}
 \caption[][4cm]{{\bf Top.} Distribution of the number of up alleles in the parental population
-  prior to selection (red), for the selected individuals the top
+  prior to selection (red), for the selected individuals in the top
   $10\%$ of the population (blue) {\bf Bottom.}  The same distribution
 for the offspring of the selected parents in the next generation
 (green). \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/QT3.R}}  \label{Fig:Response_num_alleles}
@@ -168,8 +168,8 @@ for the offspring of the selected parents in the next generation
  The individuals who are selected to form our next generation carry
  more alleles that increase the phenotype in the current range of
  environments currently experienced by the population. The average
- individual before selection carried 100 of these `up' alleles, the average
- individual surviving selection 108 `up' alleles. As individuals
+ individual before selection carried 100 of these `up' alleles, while the average
+ individual surviving selection has 108 `up' alleles. As individuals
  faithfully transmit their alleles to the next generation the average
  child of the selected parents carries 108 up alleles. Note that the
  variance has changed little, the children have plenty of variation in
@@ -183,7 +183,7 @@ for the offspring of the selected parents in the next generation
  \begin{center}
    \includegraphics[width = 0.7 \textwidth]{illustration_images/Genetic_drift/maize/7845339168_66aa3d8ccc_z.jpg}
  \end{center}
- \caption{Maize ({\it Zea mays}.) \BHLNC{Prof. Dr. Thomé's Flora von
+ \caption{Maize ({\it Zea mays} ssp. {\it mays}.) \BHLNC{Prof. Dr. Thomé's Flora von
    Deutschland. 1886. Thomé, O. W.}{https://www.biodiversitylibrary.org/page/12306602\#page/669/mode/1up}{New York Botanical Garden}} \label{fig:maize}  %é
  \end{marginfigure}  %%possible different fig https://peerj.com/preprints/26502.pdf from Jeff's paper
 
@@ -201,8 +201,8 @@ for the offspring of the selected parents in the next generation
 If our selection pressure is sustained over many generations, we can
 use our breeder's equation to predict the response. If we are willing
 to assume that our heritability does not change and we maintain a constant selection
-gradient, then after $n$ generations our phenotype mean will have
-shifted
+gradient, then after $n$ generations our phenotype mean will have shifted
+%JRI: do we know the term ``constant selection gradient yet?''
 \begin{equation}
 n h^2 S
 \end{equation}
@@ -216,15 +216,15 @@ i.e. our population will keep up a linear response to selection.
    \href{https://www.ideals.illinois.edu/handle/2142/3525}{here}, \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Illinois_long_term_selection_corn/corn_LTS.R}}\label{Fig:Illinois_LTS_dists}
  \end{figure}
 Therefore, long-term, consistent selection can drive impressive
-evolutionary change. On example of this comes a field experiment
+evolutionary change. On example of this comes from a field experiment
 in Illinois, where plant breeders have systematically selected for
 higher and lower oil content in corn. For over a century, they have taking seeds from the plants
 in the extremes of the distribution and using them to form the next
 generation. They have achieved impressive long-term responses, pushing
 the population well beyond their initial range. They've established
 two secondary populations where the selection differential was reversed. In the up-selection population they have maintained an
-impressively linear increase in oil content (shown by red line), the
-response is linear at first in the down line but they quickly reach
+impressively linear increase in oil content (shown by the red line  in figure \ref{Fig:Illinois_LTS_means}), but while the
+response is linear at first in the down line they quickly reach
 very low oil content.
 
 %%single episide of selection in cliff swallows https://www.jstor.org/stable/2411315?mag=driving-evolution-cliff-swallows&seq=1#metadata_info_tab_contents
@@ -275,12 +275,13 @@ have reversed a number of times over the years (Figure
 \includegraphics[width= 0.8 \textwidth]{Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.pdf}
 \end{center}
 \caption[4cm]{{\bf Top)} Mean body size of the Medium ground-finch
-  population measured each year, the 1973 $95\%$ confidence intervals
+  population measured each year. The 1973 $95\%$ confidence intervals
   are shown as horizontal bars. {\bf Bottom)} Standardized
-  selection differentials on body size. The statistical significant of
-  the selection differentials is shown, black points are $p<0.001$ and grey $p<0.05$.
+  selection differentials on body size. The statistical significance of
+  the selection differentials is shown: black points are $p<0.001$ and grey $p<0.05$.
   Data from \citet{grant2002unpredictable} \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Darwins_Finches_unpred/Darwins_Finches_unpred.R}} \label{fig:Darwins_Finches_unpred}
 \end{figure}
+%JRI:Y  axis of figure  is missing the zero
 
 \begin{marginfigure}
 \begin{center}
@@ -310,6 +311,7 @@ viability of our organisms (i.e. the probability they survive to
 reproduce). The probability that an individual has a phenotype $X$
 before selection is $p(X)$, so that the mean phenotype before
 selection is
+%JRI: if n ot already in the math appendix, the difference between  x and X (random variable) worth explaining
 \begin{equation}
 \mu_{BS} = \E[X] =  \int_{-\infty}^{\infty} x p(x) dx
 \end{equation}
@@ -340,6 +342,7 @@ reproduce as
 \caption{Red deer ({\it Cervus elaphus}). \BHLCC{British
     mammals. Thorburn, A. (1920)}{https://www.flickr.com/photos/biodivlibrary/21269550204}{Field Museum of Natural History Library}{2.0}} \label{fig:red_deer}
 \end{marginfigure}
+%JRI: figure should go earlier. this and maize figure messed up in my version at least.
 
 If we mean center the distribution of phenotypes in our population, i.e. set the phenotype before
 selection to zero, then
@@ -354,6 +357,8 @@ the mean of $X w(X)$ over the population.
 As our phenotype is mean centered ($\E(X)=0$), we can see that $S$ has
 the form of a covariance between our phenotype $X$ and our relative fitness
 $w(X)$
+%JRI: above you say ``The probability that an organism with a phenotype $X$ survives to reproduce is $w(X)$'' but here you redfined as relative. this is confusing.
+%JRI in equation below, looks to me like covaraince of X and w(X) not X and w(X)/\wbar
 \begin{equation}
   S =  \E \left (X
   w(X) \right) -\E(X)\E(w(X)) =Cov \left(X, \nicefrac{w(X)}{\wbar} \right) \label{S_covar}
@@ -366,10 +371,10 @@ equation using this observation we see
 R = \frac{V_A}{V}  Cov \left(X, \nicefrac{w(X)}{\wbar} \right)
 \end{equation}
 
-we see that the response to selection is due to the fact that our
+we see that the response to selection is due to the fact that the
 fitness (viability) of our organisms/parents covaries with our phenotype, and
 that our child's phenotype is correlated with our parent's phenotype.
-
+%JRI: should say ``covaries'' instead of ``is correlated with''?
 
 \paragraph{Fitness Gradients and linear regressions}
 
@@ -388,12 +393,12 @@ The best fitting slope of this regression ($\beta$), lets call it the
 \includegraphics[width= \textwidth]{Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.pdf}
 \end{center}
 \caption{Lifetime reproductive success (LRS) of male Red Deer as a
-  function of their antler mass. Data from \citet{kruuk2002antler},
+  function of their antler mass. Data from \citet{kruuk2002antler};
   see the paper for discussion of the complexities of equating this
   selection gradient with the evolutionary response. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/red_deer_selection_gradient/selection_grad_deer.R}. } \label{fig:red_deer_fitness_grad}
 \end{marginfigure}
 
-  i.e. the fitness gradient is the covariance of phenotype-fitness
+  i.e. the fitness gradient is the phenotype-fitness
  covariance divided by the phenotypic variance. Using this result we can rewrite the breeder's equation as
 \begin{equation}
 R= V_A \beta \label{eqn:R_beta}
@@ -411,6 +416,7 @@ If we choose relative fitness to be our phenotype
   \nicefrac{w(X)}{\wbar} \right) = \frac{V_A}{V} V \nonumber\\
   &=V_A
 \end{align}
+%JRI: i don't think i've seen this nice derivation of Fisher's theorem. tres cool.
 i.e. the response to selection is equal to the additive genetic
 variance for relative fitness. Or as Fisher put it
 \begin{quote}
@@ -419,7 +425,7 @@ to its genetic variance in fitness at that time.'' -\citet{fisher1930} (pg 37)
 \end{quote}
 Fisher called this `the fundamental theorem of natural
 selection'. Our proof here is just a sketch, and more formal
-approaches are needed to show it in generality. There has been much nashing of teeth over exactly how broadly this result holds, and exactly what
+approaches are needed to show it in generality. There has been much gnashing of teeth over exactly how broadly this result holds, and exactly what
 Fisher meant \citep[see ][ for a recent overview]{ewens2010gene}.
 % Ruth shaw FFTNS https://www.biorxiv.org/content/biorxiv/early/2019/04/07/601682.full.pdf
 % https://commons.wikimedia.org/wiki/File:A_guide_to_the_wild_flowers_(Plate_CXXV)_BHL23798491.jpg
@@ -469,6 +475,7 @@ which is $\beta$, so that eqns \eqref{eqn:R_beta} and
 to hold, in the first line we assume that $w(x)$ is not a function
 of $\bar{x}$, while the middle line is true when $p(x)$ is the normal distribution.
 }
+%JRI: this sidenote derivation is tough to follow. maybe skip?
 as a function of the mean phenotype:
 \begin{equation}
   R = \frac{V_A}{\wbar} \frac{\partial \wbar}{\partial \bar{x}}  \label{eqn:pheno_fitness_landscape}  %V_A
@@ -481,28 +488,29 @@ predicted by the sign of the derivative. If increasing the mean
 phenotype of the population slightly would
 increase mean fitness ($ \nicefrac{\partial \wbar}{\partial \bar{x}}
 >0$) our population will respond that generation by evolving toward
-higher values of the trait ($R>0$), left panel of Figure \ref{fig:fitness_landscape_1D_w_wbar}. Conversely if decreasing the
+higher values of the trait ($R>0$, left panel of Figure \ref{fig:fitness_landscape_1D_w_wbar}). Conversely, if decreasing the
 population mean phenotype slightly would increase the mean fitness ($ \nicefrac{\partial \wbar}{\partial \bar{x}}
 <0$) the population will that generation evolve towards lower values
-of the phenotype, middle panel of Figure \ref{fig:fitness_landscape_1D_w_wbar}. Thus we can think of the population as evolving on
+of the phenotype (middle panel of Figure \ref{fig:fitness_landscape_1D_w_wbar}). Thus we can think of the population as evolving on
 an adaptive landscape where the elevation is given by the population mean
 fitness. Natural selection operates on the basis of individual-level
 fitness, but as a result of this our population is increasing in its
-average fitness, our population is becoming better adapted (we'll
+average fitness, i.e. our population is becoming better adapted (we'll
 discuss the caveats of this interpretation below).
 
  \begin{figure*}
  \begin{center}
  \includegraphics[width= 0.8 \textwidth]{figures/Response_to_sel/fitness_landscape_1D_w_wbar.pdf}
  \end{center}
- \caption{A population evolving on a (guassian) fitness surface. The
+ \caption{A population evolving on a (Gaussian) fitness surface. The
    bottom panel shows the expected individual fitness ($w()$) and mean
    fitess as a function of phenotype. The red line shows the best
    fitting linear approximation to the relationship between phenotype
-   and fitness, eqn \eqref{fitness_regression}, whose slope is
+   and individual fitness (eqn \eqref{fitness_regression}), whose slope is
    $\beta$. The top panel shows the distribution of the phenotype
    before and after selection. \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Rcode/Quant_gen/fitness_landscape_1D_animated.R}.} \label{fig:fitness_landscape_1D_w_wbar}
  \end{figure*}
+ %JRI: why w() and not w(x)?
 
 
 What happens when it
@@ -512,9 +520,8 @@ $R=0$. Assuming that the relationship between fitness and phenotype
 stays constant, our population will stay at the top of the fitness
 peak. This view of natural selection does not imply that the population
 is evolving to the best possible state. Our population is just
-marching up the hill of mean fitness end panel Figure
-\ref{fig:fitness_landscape_1D_w_wbar}. However, this peak isn't necessarily the highest fitness peak it's just
-which ever peak was closest and so our population can become trapped
+marching up the hill of mean fitness (end panel Figure
+\ref{fig:fitness_landscape_1D_w_wbar}). However, this peak isn't necessarily the highest fitness peak but simply whichever peak was closest.  So our population can become trapped
 on a local, but not global peak of fitness (see, for example Figure \ref{fig:fitness_landscape_1D}).
 
 % % \animategraphics[height=2.8in,autoplay,controls]{12}{/Users/gcoop/Downloads/latex_gif/animate_gall_}{0}{14}
@@ -527,15 +534,16 @@ on a local, but not global peak of fitness (see, for example Figure \ref{fig:fit
 \end{center}
 \caption{{\bf Top)} A time series of stickleback phenotypic evolution from the
   fossil record. After a heavily armoured stickleback invades the lake
-  it quickly evolves towards touching pterygiophores (the bones
+  it quickly evolves fewer touching pterygiophores (the bones
   supporting the dorsal spines).  Fossil measurements means are
   calculated in 250 year bins. {\bf Bottom)} How our population moves
   on the Inferred fitness landscape. The arrows show each move made by
   the population in the 250 intervals. Data from
   \citet{bell2006inferring} and \citet{hunt2008evolution}  \gitcode{https://github.com/cooplab/popgen-notes/blob/master/Journal_figs/Quant_gen/Stickleback_fossil_traj/Stickleback_traj.R} } \label{fig:Stickleback_fossil_traj}
 \end{marginfigure}
+%JRI: this figure confused everyone, need to explain that colonization starts at time 0 or write Y-axis as ``years post colonization'' or something. Also caption had pop evolving in wrong direction (they lose pterygiophores)
 
-One dramatical example documenting adaptive evolution to a new
+One dramatic example documenting adaptive evolution to a new
 fitness optimum is offered by a remarkable time-series of
 stickleback evolution from a fossil lake-bed in Nevada \citep{bell2006inferring}. In this lake
 the layers of sediment are laid down each year allowing a very detailed
@@ -545,7 +553,7 @@ fifteen thousand years after the initial invasion of the lake by a
 heavily armoured stickleback species. In Figure \ref{fig:Stickleback_fossil_traj} the population mean number of
 touching pterygiophores, the bones supporting the dorsal spines,
 through the fossil record (Figure \ref{fig:Stickleback_fossil}). Note how quickly the species evolves toward
-its new value, presumably a fitness optimum in their new environment, and the long time subsequent time interval over which
+its new value, presumably a fitness optimum in their new environment, and the long subsequent time interval over which
 the population mean phenotype fluctuates about its new value.
 
 
@@ -557,7 +565,7 @@ surface. The population initially takes large steps up toward the peak
 of this surface and subsequently fluctuates around the peak. Under the
 interpretation that there is a single stationary peak these
 fluctuations represent genetic drift randomly knocking the population
-offer its optimum, with selection acting to restore
+off its optimum, with selection acting to restore
 the population towards this local optimum. \begin{marginfigure}
  \begin{center}
  \includegraphics[width= \textwidth]{illustration_images/Quant_gen/Fossil_stickleback/journal.pbio.1001466.g003.eps}
@@ -565,9 +573,10 @@ the population towards this local optimum. \begin{marginfigure}
  \caption{Fossil stickleback. Photo by Peter J. Park from \citet{losos2013evolutionary}, \PLOSccBY.} \label{fig:Stickleback_fossil}
 \end{marginfigure}
 
+%JRI: still don't understand which paragraphs get caps and which don't
 \paragraph{Issues with the Interpretation of Fitness Landscapes.}
 In practice, fitness landscapes may not be constant. The environment
-may be constantly changing so our population is constantly forced to run to keep
+may be constantly changing so our population is constantly forced to change to keep
 up with the fitness peak. Indeed our environment may change so quickly
 that our population our population cannot keep up with the peak. Our
 population is still trying to increase its mean fitness, to `adapt', but
@@ -620,6 +629,8 @@ fitness on phenotype
 \begin{equation}
 w_i \sim \beta x_i + \nicefrac{1}{2}  \gamma x_i^2  + \wbar \label{fitness_regression_stab}
 \end{equation}
+%JRI: why is it gamma/2 ?
+
 This $\gamma$, the coefficient of the quadratic term in our model, is the
 quadratic selection gradient: the covariance of fitness and the squared
 deviation from the phenotypic mean ($\mu_{BS}$), i.e.
